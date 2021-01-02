@@ -1,0 +1,47 @@
+.title {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+      h1, h2, h3,h4,h5, h6{
+         margin: 0;
+         text-align: center;
+      }
+
+      h1{
+         height: calc((3rem + 1.5vw + 1px) * 2);
+         font-size: calc(3rem + 1.5vw);
+         margin-bottom: 30px;
+      }
+}
+
+.title span {
+   visibility: hidden;
+ }
+ 
+.title span.typed{
+   visibility: visible;
+}
+
+.title span.next{
+   visibility: visible;
+ }
+ 
+ .next::after {
+   content: '';
+   vertical-align: middle;
+   display: inline-block;
+   width: 4px;
+   animation: cursorLocation .9s forwards;
+   background: red;
+   animation-iteration-count: infinite;
+ }
+ 
+ @keyframes cursorLocation{
+    from {
+      height: calc(3rem + 1.5vw);
+      }
+    
+    to {
+      height: 0px;
+    }
+ }

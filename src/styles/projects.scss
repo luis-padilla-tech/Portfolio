@@ -1,0 +1,103 @@
+$project-padding: 15px;
+$project-radius: 0.3rem;
+$btn-primary-bg: #6042f5;
+$btn-primary-bg-hover: #4042f5;
+
+.btn-primary {
+   background: $btn-primary-bg;
+   border-color: $btn-primary-bg;
+   border-radius: $project-radius;
+   box-shadow: none;
+}
+
+.btn-primary.disabled {
+   background: $btn-primary-bg;
+   border-color: $btn-primary-bg;
+}
+
+.btn-primary:hover {
+   background: $btn-primary-bg-hover;
+   border-color: $btn-primary-bg-hover;
+}
+
+.btn-primary:focus {
+   background: $btn-primary-bg-hover;
+   border-color: $btn-primary-bg-hover;
+   box-shadow: none;
+}
+
+.btn-primary:focus-within {
+   background: $btn-primary-bg-hover;
+   border-color: $btn-primary-bg-hover;
+   box-shadow: none;
+}
+
+.btn-primary:checked {
+   background: $btn-primary-bg-hover;
+   border-color: $btn-primary-bg-hover;
+   box-shadow: none;
+}
+
+.btn-primary:active {
+   background: $btn-primary-bg-hover;
+   border-color: $btn-primary-bg-hover;
+   box-shadow: none;
+}
+
+h2 {
+   margin: $project-padding 0;
+}
+
+.project-container {
+
+   .project {
+
+      margin: $project-padding 0;
+      padding: $project-padding;
+      background: #353535;
+      border-radius: $project-radius;
+
+      .image-container {
+         border-radius: $project-radius;
+         width: 100%;
+         overflow-x: hidden;
+         overflow-y: hidden;
+      }
+
+      img {
+         height: 100%;
+         width: 100%;
+      }
+
+      p {
+         margin: $project-padding 0 0 0;
+         overflow-y: auto;
+      }
+
+      .b-group {
+
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
+         margin: $project-padding 0 0 0;
+         padding: 0;
+      }
+
+      .btn {
+         width: 48%;
+      }
+   }
+}
+
+@media only screen and (min-width: 992px) {
+
+   .project-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .project{
+         width: 33vw;
+         margin: $project-padding auto;
+      }
+   }
+}

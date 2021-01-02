@@ -1,0 +1,15 @@
+$dark: #202020;
+$super-dark: #161616;
+
+* {
+   color: white;   
+   font-family: 'Montserrat', sans-serif;
+}
+
+body{
+   background-color: $dark;
+}
+
+.bg-dark{
+   background-color: $super-dark !important;
+}
