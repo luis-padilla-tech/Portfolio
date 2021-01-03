@@ -14,14 +14,14 @@ export default class Home extends Component {
    }
 
    componentDidMount(){
-      this.resizeEvent();
       window.addEventListener('resize', this.resizeEvent);
       this.timerID = setInterval(() => this.tick(), 500);
+      this.resizeEvent();
    }
 
    componentWillUnmount(){
-      window.removeEventListener('resize', this.resizeEvent);
       clearInterval(this.timerID);
+      window.removeEventListener('resize', this.resizeEvent);
    }
 
    resizeEvent(){
@@ -53,7 +53,8 @@ export default class Home extends Component {
 
    render() {
 
-   const letters = this.state.stuff.map((item, index) => <span key={index} className={item.class}>{item.letter}</span>)
+      const letters = this.state.stuff.map((item, index) => <span key={index} className={item.class}>{item.letter}</span>)
+
       return (
          <div className="container">
          <div className="row">
@@ -64,11 +65,13 @@ export default class Home extends Component {
                </div>
             </div>
             <div className="col-xl-3">
-               <pre>{'{'}</pre>
-               <pre> "author": "Luis Padilla",</pre>
-               <pre> "description": "Software Engineer",</pre>
-               <pre> "status": "under-contruction"</pre>
-               <pre>{'}'}</pre>
+               <div className="json">
+                  <pre>{'{'}</pre>
+                  <pre> "author": "Luis Padilla",</pre>
+                  <pre> "description": "Software Engineer",</pre>
+                  <pre> "status": "under-contruction"</pre>
+                  <pre>{'}'}</pre>
+               </div>
             </div>
          </div>
       </div>

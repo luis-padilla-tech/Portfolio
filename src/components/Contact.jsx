@@ -31,10 +31,23 @@ export default class Contact extends Component {
       return (
          <div className="container">
             <div className="contact-container" id="contact-container">
-               <a href="http://github.com/luis-padilla-tech" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size={ICON_SIZE}/></a>
-               <a href="https://linkedin.com/in/luis-padilla-tech" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} size={ICON_SIZE}/></a>
-               <a href="mailto:luis@luispadilla.tech"><FontAwesomeIcon icon={faEnvelope} size={ICON_SIZE}/></a>
-               <a className="contact-link" href="tel:+5414414696"><FontAwesomeIcon icon={faPhone} size={ICON_SIZE}/></a>
+               <h1>Contact Me</h1>
+               <div className="contact-box">
+                  <a href="https://linkedin.com/in/luis-padilla-tech" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} size={ICON_SIZE}/></a>
+                  <p>Connect with me</p>
+               </div>
+               <div className="contact-box">               
+                  <a href="mailto:luis@luispadilla.tech"><FontAwesomeIcon icon={faEnvelope} size={ICON_SIZE}/></a>
+                  <p>Email Me</p>
+               </div>
+               <div className="contact-box">
+                  <a href="http://github.com/luis-padilla-tech" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size={ICON_SIZE}/></a>
+                  <p>See my other projects</p>
+               </div>
+               <div className="contact-box">               
+                  <a className="contact-link" href="tel:+5414414696"><FontAwesomeIcon icon={faPhone} size={ICON_SIZE}/></a>
+                  <p>Call Me</p>
+               </div>
             </div>
          </div>
       )

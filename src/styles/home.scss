@@ -35,6 +35,13 @@
    background: white;
    animation-iteration-count: infinite;
  }
+
+ .json {
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+ }
  
  @keyframes cursorLocation{
     from {
