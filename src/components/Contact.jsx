@@ -19,19 +19,21 @@ export default class Contact extends Component {
 
    resizeEvent(){
       let navBar = document.getElementById('navbar');
+      let header = document.getElementById('contact-header');
 
       let navHeight = parseInt(getComputedStyle(navBar).height);
       let viweHeight = parseInt(window.innerHeight);
+      let headerheight = parseInt(getComputedStyle(header).height) + parseInt(getComputedStyle(header).marginBottom) + parseInt(getComputedStyle(header).marginTop)
 
       let title = document.getElementById('contact-container');
-      title.style.height = `${Math.floor(viweHeight - navHeight) - 2}px`
+      title.style.height = `${Math.floor(viweHeight - navHeight - headerheight) - 2}px`
    }
 
    render() {
       return (
          <div className="container">
+            <h2 id='contact-header'>Contact Me</h2>
             <div className="contact-container" id="contact-container">
-               <h1>Contact Me</h1>
                <div className="contact-box">
                   <a href="https://linkedin.com/in/luis-padilla-tech" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} size={ICON_SIZE}/></a>
                   <p>Connect with me</p>
